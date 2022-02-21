@@ -1,0 +1,21 @@
+{
+  "init-tsx": {
+    "scrope": "typescript, tsx",
+    "prefix": "init-tsx",
+    "body": [
+      "import React from 'react';",
+      "import { Box } from '@material-ui/core';",
+      "\n",
+      "const ${name_component} = () => {",
+      "\treturn (",
+      "\t\t<Box>",
+      "\t\t\t${content}",
+      "\t\t</Box>",
+      "\t)",
+      "}",
+      "\n",
+      "export default ${name_component};"
+    ],
+    "description": "init tsx"
+  }
+}
