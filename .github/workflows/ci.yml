@@ -17,7 +17,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{secrets.GIT_TOKEN}}
-          repository: 'true'
       - name: Checkout submodules
         shell: bash
         run: |
