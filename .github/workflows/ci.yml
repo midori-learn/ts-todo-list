@@ -16,13 +16,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          token: ${{secrets.GIT_TOKEN}}
-      - name: Checkout submodules
-        shell: bash
-        run: |
-          git config --global url."https://github.com/".insteadOf "git@github.com:"
-          git submodule sync --recursive
-          git -c "http.extraheader=Authorization: basic ${{secrets.GIT_TOKEN}}" -c protocol.version=2 submodule update --init -- recursive --force --depth=1
+          repo-token: ${{secrets.GIT_TOKEN}}
       - name: Use Node.js 14
         uses: actions/setup-node@v2
         with:
